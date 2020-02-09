@@ -323,7 +323,7 @@ std::ofstream writeToPPMFile(Vec3f** image, int rows, int columns, int maximumCo
 	//Start creating the file
 	std::ostringstream oss;
 	char s[10];
-	sprintf_s(s, "%04d", frameNum);
+	sprintf(s, "%04d", frameNum);
 	oss << "./output/v4/image." << s << ".ppm";
 	std::string outputLocation = oss.str();
 	std::ofstream file(outputLocation, std::ios::binary);;
